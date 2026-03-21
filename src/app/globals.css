@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Playfair Display", serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Light theme */
+  --bg-primary: #faf9f6;
+  --bg-secondary: #f3f1eb;
+  --bg-card: #ffffff;
+  --bg-sidebar: #f8f6f1;
+  --text-primary: #1e1914;
+  --text-secondary: #6e6055;
+  --text-muted: #a8998a;
+  --border: #e0d9cc;
+  --border-subtle: #f0ede6;
+  --accent-orange: #f97316;
+  --accent-violet: #8b5cf6;
+  --accent-orange-light: #fff7ed;
+  --accent-violet-light: #f5f3ff;
+}
+
+.dark {
+  --bg-primary: #100e0b;
+  --bg-secondary: #1a1510;
+  --bg-card: #1e1914;
+  --bg-sidebar: #16120e;
+  --text-primary: #f8f7f4;
+  --text-secondary: #c9bfaf;
+  --text-muted: #8a7a6b;
+  --border: #3d352e;
+  --border-subtle: #2a231b;
+  --accent-orange: #f97316;
+  --accent-violet: #a78bfa;
+  --accent-orange-light: #1c1008;
+  --accent-violet-light: #130d1f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Selection */
+::selection {
+  background: rgba(249, 115, 22, 0.2);
+  color: var(--text-primary);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Prose/markdown styling */
+.prose-content h1,
+.prose-content h2,
+.prose-content h3 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.prose-content h1 {
+  font-size: 1.5rem;
+}
+.prose-content h2 {
+  font-size: 1.25rem;
+}
+.prose-content h3 {
+  font-size: 1.1rem;
+}
+
+.prose-content p {
+  margin-bottom: 0.75em;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.prose-content ul,
+.prose-content ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose-content li {
+  margin-bottom: 0.4em;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.prose-content strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.prose-content em {
+  font-style: italic;
+}
+
+.prose-content code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--bg-secondary);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: var(--accent-orange);
+}
+
+.prose-content pre {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.prose-content pre code {
+  background: none;
+  padding: 0;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.prose-content blockquote {
+  border-left: 3px solid var(--accent-orange);
+  padding-left: 1em;
+  margin: 1em 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.prose-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5em 0;
+}
+
+.prose-content a {
+  color: var(--accent-orange);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Shimmer loading effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--bg-secondary) 0%,
+    var(--border) 50%,
+    var(--bg-secondary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Typing indicator */
+.typing-dot {
+  animation: bounceSoft 1s ease-in-out infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-orange);
+  border-radius: 6px;
+}
+
+/* Glass morphism */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f97316, #a855f7, #f97316);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientX 4s ease infinite;
+}
+
+/* Noise texture overlay */
+.noise-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Blob decoration */
+.blob {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: blob 7s infinite;
+}
+
+/* Chat message animations */
+.message-enter {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Sidebar transition */
+.sidebar-transition {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease-out;
+}
+
+/* Button hover glow */
+.btn-glow-orange:hover {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}
+
+.btn-glow-violet:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Responsive chat layout */
+@media (max-width: 768px) {
+  .chat-layout-sidebar {
+    display: none;
+  }
+
+  .chat-layout-sidebar.open {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+  }
+}
+
+/* Custom checkbox */
+input[type="checkbox"] {
+  accent-color: var(--accent-orange);
+}
