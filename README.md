@@ -1,4 +1,4 @@
-# 🤖 CC Bot – Content Creation Co-Pilot
+# CC Bot - Content Creation Co-Pilot
 
 > Your AI-powered content creation assistant. Brainstorm. Outline. Optimize. Publish.
 
@@ -9,23 +9,23 @@
 
 ---
 
-## ✨ Features
+## Features
 
-- **🎯 Purpose-built** for content creation (blog posts, social media, YouTube, newsletters)
-- **⚡ Streaming responses** via Vercel AI SDK
-- **🎨 Beautiful UI** — Notion meets Jasper.ai aesthetics
-- **🌙 Dark/Light mode** with persistent preference
-- **📋 One-click copy** for all generated content
-- **💾 Local conversation history** via localStorage
-- **📥 Export to Markdown** for any conversation
-- **🔗 Shareable conversation links**
-- **🎉 Confetti celebrations** for completed outlines
-- **📱 Fully responsive** — mobile-first design
-- **🚀 Vercel-ready** — deploy in one click
+- **Purpose-built** for content creation (blog posts, social media, YouTube, newsletters)
+- **Streaming responses** via Vercel AI SDK
+- **Beautiful UI** — Notion meets Jasper.ai aesthetics
+- **Dark/Light mode** with persistent preference
+- **One-click copy** for all generated content
+- **Local conversation history** via localStorage
+- **Export to Markdown** for any conversation
+- **Shareable conversation links**
+- **Confetti celebrations** for completed outlines
+- **Fully responsive** — mobile-first design
+- **Vercel-ready** — deploy in one click
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone & Install
 
@@ -48,7 +48,7 @@ OPENAI_API_KEY=sk-your-key-here
 ```
 
 > **Want to use a different provider?**
-> See [Switching AI Providers](#-switching-ai-providers) below.
+> See [Switching AI Providers](#switching-ai-providers) below.
 
 ### 3. Run Locally
 
@@ -56,11 +56,11 @@ OPENAI_API_KEY=sk-your-key-here
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) 🎉
+Open [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## 🔑 Switching AI Providers
+## Switching AI Providers
 
 ### Option A: OpenAI (default, recommended)
 
@@ -110,7 +110,7 @@ const model = groq("llama-3.1-8b-instant");
 
 ---
 
-## 📁 File Structure
+## File Structure
 
 ```
 content-creation-chatbot/
@@ -119,7 +119,7 @@ content-creation-chatbot/
 │   │   ├── api/chat/route.ts          # AI streaming endpoint
 │   │   ├── globals.css                # Global styles + CSS variables
 │   │   ├── layout.tsx                 # Root layout with metadata
-│   │   └── page.tsx                   # Main page (landing ↔ chat)
+│   │   └── page.tsx                   # Main page (landing to chat)
 │   ├── components/
 │   │   ├── chat/
 │   │   │   ├── ChatInterface.tsx      # Main chat UI + AI SDK integration
@@ -158,7 +158,7 @@ content-creation-chatbot/
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Change Bot Personality
 
@@ -179,7 +179,7 @@ In `src/lib/constants.ts`, add to `CONTENT_TEMPLATES`:
   description: "What it does",
   prompt: "Your prompt with [PLACEHOLDERS]...",
   category: "new-content",
-  icon: "🎯",
+  icon: "target",
   tags: ["tag1", "tag2"],
 }
 ```
@@ -197,7 +197,7 @@ Edit CSS variables in `src/app/globals.css`:
 
 ---
 
-## 🚀 Deploy to Vercel
+## Deploy to Vercel
 
 ```bash
 # Install Vercel CLI
@@ -214,7 +214,7 @@ Or click: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -228,10 +228,10 @@ Or click: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/
 
 ---
 
-## 📄 License
+## License
 
 MIT — use freely for personal and commercial projects.
 
 ---
 
-Made with ❤️ by CC Bot — *Your Content Creation Co-Pilot*
+Made with love by CC Bot — *Your Content Creation Co-Pilot*
