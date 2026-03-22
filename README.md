@@ -41,10 +41,10 @@ npm install
 cp .env.example .env.local
 ```
 
-Open `.env.local` and add your OpenAI API key:
+Open `.env.local` and add your GROQ API key:
 
 ```env
-OPENAI_API_KEY=sk-your-key-here
+GROQ_API_KEY=gsk_-your-key-here
 ```
 
 > **Want to use a different provider?**
