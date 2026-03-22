@@ -56,7 +56,7 @@ OPENAI_API_KEY=sk-your-key-here
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:4000](http://localhost:4000)
 
 ---
 
@@ -194,23 +194,6 @@ Edit CSS variables in `src/app/globals.css`:
   --accent-violet: #8b5cf6;  /* Secondary accent */
 }
 ```
-
----
-
-## Deploy to Vercel
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-
-# Add environment variables in Vercel dashboard:
-# OPENAI_API_KEY = your-key
-```
-
-Or click: [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
 ---
 
